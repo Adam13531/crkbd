@@ -6,11 +6,17 @@ Crkbd stands for Corne Keyboard.
 
 ## Adam's updates
 
-I wanted a very specific setup: a v3, 5-column choc keyboard. I forked this repo from https://github.com/daysgobye/crkbd/tree/choc-v3, so I got two of those things for free. I then modified this to chop off a column on both sides. I've ordered the PCBs, but I have no real experience with doing any of this, so I can't confirm that it'll work. I'll probably know in December, 2021, and hopefully I remember to update this then.
+I wanted a very specific setup: a v3, 5-column choc keyboard. I forked this repo from https://github.com/daysgobye/crkbd/tree/choc-v3, so I got two of those things for free. I then modified the design to chop a column of keys off from both sides. I ordered the PCBs from [JLCPCB](https://jlcpcb.com/) using these settings (which will get you _five_ keyboards' worth of parts, not 2½):
 
-Note: I never touched the schematic file, just the PCB.
+![image](https://user-images.githubusercontent.com/7192897/143666549-bfe39743-461c-4494-a71e-f4b3a82fec31.png)
 
-I derived a bill of materials based on [this reddit post](https://www.reddit.com/r/crkbd/comments/esv3i8/guide_corne_diy_kit/), [this GitHub page](https://github.com/ItsWaffIe/waffle_corne/wiki/Build-Log#parts), and [this great build guide](https://medwa.pl/docs/corne-lp-build-guide/#bom). Caveat: [I have no idea what I'm doing](https://knowyourmeme.com/memes/i-have-no-idea-what-im-doing). For a frame of reference, I ordered everything from AliExpress in October, 2021.
+![image](https://user-images.githubusercontent.com/7192897/143666569-581366c1-17a8-4f11-b1fe-73eb904e408a.png)
+
+The resulting PCB looks like this:
+
+![PCB](https://user-images.githubusercontent.com/7192897/143667272-6b00503a-9861-4b1d-ade0-cb7e9dcfa954.jpg)
+
+I derived a bill of materials based on [this reddit post](https://www.reddit.com/r/crkbd/comments/esv3i8/guide_corne_diy_kit/), [this GitHub page](https://github.com/ItsWaffIe/waffle_corne/wiki/Build-Log#parts), and [this great build guide](https://medwa.pl/docs/corne-lp-build-guide/#bom). For a frame of reference, I ordered everything from AliExpress in October, 2021.
 
 **Part**|**Quantity ordered**|**Cost (USD)**
 :-----:|:-----:|:-----:
@@ -41,6 +47,24 @@ Full part names in case the links eventually die:
 - Mini/Type-C/Micro USB Pro Micro ATMEGA32U4 5V/16MHZ module With the bootloader for arduino with 2 row pin header for arduino. Product properties: TYPE-C USB 3-6V
 - 50-2000PCS SK6812 MINI-E RGB (similar with WS2812B) SK6812 3228 SMD Pixels LED Chip Individually Addressable Full Color DC 5V. Product properties: 100 PCS
 - 50-1000pcs SK6812 WS2812B IC Bulit in 5050 3535 RGB SMD Addressable Digital RGB Full Color LED Chip Pixels Light Bead DC5V. Product properties: 5050 + White chip + 100pcs
+
+### Adam's notes
+
+- **Miscellaneous**
+    - I had basically no idea what I was doing for most of this. (◕‿◕✿)
+    - Do not attach/detach the TRRS cable while the keyboard is powered on ([reference](https://docs.qmk.fm/#/feature_split_keyboard?id=considerations)).
+    - For testing LEDs, use the `soundmonster` keymap, which has all lights on by default. The underglow LEDs all need to be connected for the per-key lighting to work. If _nothing_ turns on, then it means you should look at the underglow LEDs or your firmware. If _some_ turn on, then you should look near the last LED to light up (or the next LED to _not_ light up).
+    - I made [a video](https://www.youtube.com/watch?v=uilLCe1fvb0) talking about my keyboard journey. Skip to the end if you want to see the build that this design produced.
+- **BOM notes**
+    - The microcontrollers I got are cheap for a reason—they have almost no memory on them. I have about 300 bytes free with [my keymap](https://github.com/Adam13531/qmk_firmware/tree/master/keyboards/crkbd/keymaps/adam), and I don't use OLEDs.
+    - The BOM doesn't contain:
+        - OLEDs (because I didn't want them)
+        - Physical reset buttons (I opt to use the `RESET` key that I've mapped through QMK)
+        - A TRRS cable (I already had one)
+- **Design changes I'd make if I weren't lazy**
+    - I never touched the schematic file, just the PCB, so the schematic may be totally wrong. This doesn't impact anything in the manufacturing process, but I believe it affects the BOM that you can have KiCad generate.
+    - Delete the `JLCJLCJLCJLC` text on the PCB. It turns out it didn't get overwritten with the order number, so now the `JLCJLCJLCJLC` text is visible on the underside of the keyboard. The order number got printed on the cutaway part.
+    - I mislabeled the LEDs in the silkscreen (some numbers are out of order—definitely at least `24 25 26`). The LED numbers also may not correspond to the LEDs in QMK, but that may be for a different reason.
 
 ## Lineup
 
