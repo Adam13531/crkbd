@@ -56,7 +56,6 @@ Full part names in case the links eventually die:
     - For testing LEDs, use the `soundmonster` keymap, which has all lights on by default. The underglow LEDs all need to be connected for the per-key lighting to work. If _nothing_ turns on, then it means you should look at the underglow LEDs or your firmware. If _some_ turn on, then you should look near the last LED to light up (or the next LED to _not_ light up).
     - I made [a video](https://www.youtube.com/watch?v=uilLCe1fvb0) talking about my keyboard journey. Skip to the end if you want to see the build that this design produced.
 - **BOM notes**
-    - The microcontrollers I got are cheap for a reason—they have almost no memory on them. I have about 300 bytes free with [my keymap](https://github.com/Adam13531/qmk_firmware/tree/master/keyboards/crkbd/keymaps/adam), and I don't use OLEDs.
     - The BOM doesn't contain:
         - OLEDs (because I didn't want them)
         - Physical reset buttons (I opt to use the `RESET` key that I've mapped through QMK)
