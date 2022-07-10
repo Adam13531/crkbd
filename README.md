@@ -29,8 +29,8 @@ I derived a bill of materials based on [this reddit post](https://www.reddit.com
 [TRRS jack](https://www.aliexpress.com/item/33029465106.html)|10|$0.75
 [Diodes](https://www.aliexpress.com/item/4000685043735.html)|100|$0.69
 [Pro Micro microcontroller](https://www.aliexpress.com/item/32888212119.html)|2|$10.14
-[Per-key LED](https://www.aliexpress.com/item/32830413032.html)|100|$9.12
-[Underglow LED](https://www.aliexpress.com/item/4000475685852.html)|100|$10.58
+[Per-key LED](https://www.aliexpress.com/item/4000475685852.html)|100|$9.12
+[Underglow LED](https://www.aliexpress.com/item/32830413032.html)|100|$10.58
 Shipping to US|1|~$20
 Tax|1|~$14
 
