@@ -16,7 +16,7 @@ The resulting PCB looks like this:
 
 ![PCB](https://user-images.githubusercontent.com/7192897/143667272-6b00503a-9861-4b1d-ade0-cb7e9dcfa954.jpg)
 
-I derived a bill of materials based on [this reddit post](https://www.reddit.com/r/crkbd/comments/esv3i8/guide_corne_diy_kit/), [this GitHub page](https://github.com/ItsWaffIe/waffle_corne/wiki/Build-Log#parts), and [this great build guide](https://medwa.pl/docs/corne-lp-build-guide/#bom). For a frame of reference, I ordered everything from AliExpress in October, 2021.
+I derived a bill of materials based on [this reddit post](https://www.reddit.com/r/crkbd/comments/esv3i8/guide_corne_diy_kit/), [this GitHub page](https://github.com/ItsWaffIe/waffle_corne/wiki/Build-Log#parts), and [this great build guide](https://medwa.io/docs/corne-lp-build-guide/#bom). For a frame of reference, I ordered everything from AliExpress in October, 2021.
 
 **Part**|**Quantity ordered**|**Cost (USD)**
 :-----:|:-----:|:-----:
